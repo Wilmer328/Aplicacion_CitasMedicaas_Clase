@@ -23,7 +23,8 @@ class AppointmentManager {
   }
 
   deleteAppointment(id) {
-    const index = this._appointments.findIndex(a => a.id === String(id));
+    const sid = String(id);
+    const index = this._appointments.findIndex(a => a.id === sid);
     if (index === -1) return false;
     this._appointments.splice(index, 1);
     return true;
