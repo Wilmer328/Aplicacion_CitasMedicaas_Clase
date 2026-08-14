@@ -27,3 +27,13 @@ Cada funcionalidad se trabajará con el ciclo TDD (red → green → refactor) y
 
 ## Notas para el docente
 El repositorio contendrá commits intermedios que muestran cada paso del ciclo TDD para al menos 3 funcionalidades. Estoy disponible para ejecutar los comandos de Git localmente si autoriza la conexión a su cuenta GitHub.
+
+## Evidencia (commits importantes)
+En el repositorio se registran los commits que muestran el flujo TDD. Enlace al repo remoto: https://github.com/Wilmer328/Aplicacion_CitasMedicaas_Clase
+
+- `chore: add project skeleton, requirements and initial tests` — creación de esqueleto y tests iniciales: https://github.com/Wilmer328/Aplicacion_CitasMedicaas_Clase/commit/63ce8c6
+- `test: add listing appointments test (TDD)` — prueba para listar citas: https://github.com/Wilmer328/Aplicacion_CitasMedicaas_Clase/commit/2726bcf
+- `test: add delete appointment tests (TDD)` — pruebas para eliminar citas: https://github.com/Wilmer328/Aplicacion_CitasMedicaas_Clase/commit/4fba287
+- `refactor: normalize id handling in deleteAppointment` — refactor y limpieza: https://github.com/Wilmer328/Aplicacion_CitasMedicaas_Clase/commit/f94ae3a
+
+Para revisar el proceso paso a paso, abra cada commit desde los enlaces anteriores en GitHub.
