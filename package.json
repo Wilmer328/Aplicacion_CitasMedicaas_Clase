@@ -1,0 +1,16 @@
+{
+  "name": "citas-medicas-tdd",
+  "version": "0.1.0",
+  "description": "Práctica TDD: gestión de citas médicas",
+  "main": "src/appointments.js",
+  "scripts": {
+    "test": "jest --colors",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Citas Médicas — Demo TDD</title>
+  </head>
+  <body>
+    <h1>Citas Médicas (Demo)</h1>
+    <form id="form">
+      <input id="paciente" placeholder="Paciente" required />
+      <input id="fechaHora" placeholder="YYYY-MM-DDTHH:MM" required />
+      <input id="motivo" placeholder="Motivo" required />
+      <button type="submit">Agregar</button>
+    </form>
+    <ul id="lista"></ul>
+    <script>
+      // UI mínima: usa la lógica del lado cliente para demostrar
+      const form = document.getElementById('form');
+      const lista = document.getElementById('lista');
+      const manager = new (function(){
+        this._items = [];
+        this._id = 1;
+        this.add = function(p){ p.id = String(this._id++); this._items.push(p); return p };
+        this.list = function(){ return [...this._items] };
+      })();
+
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const paciente = document.getElementById('paciente').value;
+        const fechaHora = document.getElementById('fechaHora').value;
+        const motivo = document.getElementById('motivo').value;
+        const creado = manager.add({ paciente, fechaHora, motivo });
+        const li = document.createElement('li');
+        li.textContent = `${creado.id} - ${creado.paciente} @ ${creado.fechaHora} (${creado.motivo})`;
+        lista.appendChild(li);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
